@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <div class="action-box">
+            <a href="javascript:void(0)" onclick="changeDisplay(this)" flag=0>change</a>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        function changeDisplay(item){
+            var flag= $(item).attr("flag");
+            var widthcurrent= $(item).outerWidth(true);
+            var heightcurrent= $(item).outerHeight(true);
+            if(flag==0){
+                $(item).closest("iframe").css({width: "80vw", height:"80vh"});
+                flag==1;
+                $(item).attr("flag",flag);
+            }else if(flag==1){
+                $(item).closest("iframe").css({width: "20vw", height:"100vh"});
+                flag==2;
+                $(item).attr("flag",flag);
+            }else{
+                $(item).closest("iframe").css({width: widthcurrent, height:heightcurrent});
+                flag==0;
+                $(item).attr("flag",0);
+            }
+        }
+    </script>
+</body>
+</html>
