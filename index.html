@@ -18,6 +18,7 @@
             var flag= $(item).attr("flag");
             var widthcurrent= $(item).outerWidth(true);
             var heightcurrent= $(item).outerHeight(true);
+            console.log("flag",flag);
             if(flag==0){
                 $(item).closest("iframe").css({width: "80vw", height:"80vh"});
                 flag==1;
