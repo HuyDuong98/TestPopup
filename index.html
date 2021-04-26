@@ -20,14 +20,17 @@
             var heightcurrent= $(item).outerHeight(true);
             console.log("flag",flag);
             if(flag==0){
+                console.log("1",flag);
                 $(item).closest("iframe").css({width: "80vw", height:"80vh"});
                 flag==1;
                 $(item).attr("flag",flag);
             }else if(flag==1){
+                console.log("2",flag);
                 $(item).closest("iframe").css({width: "20vw", height:"100vh"});
                 flag==2;
                 $(item).attr("flag",flag);
             }else{
+                console.log("3",flag);
                 $(item).closest("iframe").css({width: widthcurrent, height:heightcurrent});
                 flag==0;
                 $(item).attr("flag",0);
